@@ -1,7 +1,4 @@
 from .base_page import BasePage
-from .locators import AppsPageLocators
-from pages.locators import MainPageLocators
-from pages.locators import LoginFormLocators
 import time
 
 
