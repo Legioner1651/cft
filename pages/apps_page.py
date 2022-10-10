@@ -28,7 +28,7 @@ class AppsPage(BasePage):
     def get_button_text(self, *arg):
         text = self.browser.find_element(*arg).text
         # print('get_text = "' + text + '"')
-        text = str(text.replace("\n", " "))     # обработка случая когда текст распологался на нескольких строках
+        text = str(text.replace("\n", " "))     # обработка случая когда текст располагался на нескольких строках
         # print(text)
         return text
 
