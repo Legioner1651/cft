@@ -16,6 +16,7 @@ class BasePage():
     def open(self):  # метод open, открывает нужную страницу в браузере, используя метод get()
         self.browser.get(self.url)
 
+
     def is_element_present(self, how, what):  # how селектор, what - ссылка
         try:
             self.browser.find_element(how, what)

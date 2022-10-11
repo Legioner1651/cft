@@ -9,11 +9,8 @@ class AppsPage(BasePage):
         element = self.browser.find_element(*arg)                                                       # получение элемента по которому нужно кликнуть
         element.click()
         handles = self.browser.window_handles                                                           # получение списка открытых окон
-        # print('self.browser.window_handles = ' + str(handles))                                          # список открытых окон
         self.browser.switch_to.window(handles[len(handles) - 1])                                        # установить ссылку на последние окно
         self.url = self.browser.current_url                                                             # переприсваиваем объекту текущий URL
-        # print('self.browser.current_url = ' + str(self.browser.current_url))                            #
-        # print('self.browser.current_window_handle = "' + str(self.browser.current_window_handle) + '"') #
         time.sleep(2)
 
     def get_self_url(self):           # получение url объекта
@@ -24,12 +21,9 @@ class AppsPage(BasePage):
 
     def get_button_text(self, *arg):
         text = self.browser.find_element(*arg).text
-        # print('get_text = "' + text + '"')
         text = str(text.replace("\n", " "))     # обработка случая когда текст располагался на нескольких строках
-        # print(text)
         return text
 
     def get_text(self, *arg):
-        #print(self.browser.find_element(*arg).get_attribute('alt'))
         print('get_text = "' + self.browser.find_element(*arg).text + '"')
 
