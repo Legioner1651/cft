@@ -21,7 +21,7 @@ def test_button_2_main_page(browser):	            # Проверка кнопк�
     assert page.get_self_url() == 'https://www.cft.ru/', "URL after transition is wrong"
 
 
-def test_button_group_page(browser):	            # Проверка кнопки: "Каталоги решений и продуктов"
+def test_button_group_page(browser):	            # Проверка кнопки: "ГРУППА КОМПАНИЙ"
     locator = AppsPageLocators.GROUP_LINK
     # 1. Инициализация Page Object, передача в конструктор экземпляр драйвера и url адрес.
     page = AppsPage(browser, link)
